@@ -20,6 +20,7 @@ command+shift+]/command+shift+[     选择直到代码块结束/开始
 command+加号/减号   展开/折叠代码块
 command+shift+加号/减号     展开/折叠所有代码块
 option+r    批量修改变量(可以通过proference->keymap->rename修改快捷键）
+option+回退键      直接删除整个单词
 
 
 查看
