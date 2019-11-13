@@ -1,0 +1,43 @@
+idea编辑器
+command+,  idea常用preferences设置
+command+;  idea项目project structure设置
+
+代码编辑
+command+shift+enter  自动结束代码,行末自动添加分号
+command+p   显示方法的参数信息,快速查看方法参数类型
+control+j   快速查看类的基本信息
+control+enter   pojo类生成代码(getter,setter,hashcode)等方法
+command+O   重写父类方法,重写父类所有方法
+command+i   实现方法(实现接口中的方法)
+command+option+t   选中代码,使用(if...else,try...catch,for)等包围选中代码
+shift+上下方向键     增加/减少选中代码块
+option+enter    代码自动提示
+command+option+l    格式化代码
+control+option+o    优化import
+command+d   复制当前行或选定的块
+shift+enter    开始新的一行
+command+shift+]/command+shift+[     选择直到代码块结束/开始
+command+加号/减号   展开/折叠代码块
+command+shift+加号/减号     展开/折叠所有代码块
+option+r    批量修改变量(可以通过proference->keymap->rename修改快捷键）
+
+
+查看
+shift+shift     查询任何东西
+command+f       文件内查找
+command+r       文件内替换
+control+h       显示当前类的层次结构
+
+command+1       工程显示
+command+7       显示类方法结构
+command+9       显示版本控制
+
+command+e       文件切换
+
+
+重构
+command+option+m    将选中的代码提取为方法
+command+option+v    在指定方法后提取变量,获取返回变量类型
+
+
+
