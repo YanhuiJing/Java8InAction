@@ -9,9 +9,9 @@ import org.apache.log4j.Logger;
  * @Date : 2019-11-1810:43
  * @DESC : log4j测试
  */
-public class Test {
+public class Log4jAction {
 
-    private static Logger log = Logger.getLogger(Test.class);
+    private static Logger log = Logger.getLogger(Log4jAction.class);
 
     public static void main(String[] args) {
 
