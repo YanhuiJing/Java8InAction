@@ -27,7 +27,7 @@ public class SetGetExample {
     public static void main(String[] args) {
         SetGetExample data = new SetGetExample();
 
-        SetGetExample gavin = data.setName("gavin").setAge(30);
+        data.setName("gavin").setAge(30)
 
 
     }
