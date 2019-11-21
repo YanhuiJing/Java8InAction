@@ -10,9 +10,12 @@ import lombok.RequiredArgsConstructor;
  * @DESC : lombok构造方法注解使用案例
  *
  * @NoArgsConstructor和@AllArgsConstructor注解,分别对应无参构造和全参构造
+ * @RequiredArgsConstructor(staticName = "of") 通过静态方法构建对象
+ *
  */
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor(staticName = "of")
 public class ConstructorExample {
 
     private String name;
@@ -23,6 +26,7 @@ public class ConstructorExample {
 
         ConstructorExample data01 = new ConstructorExample();
         ConstructorExample data02 = new ConstructorExample("gavin",30,90.0);
+        ConstructorExample of = ConstructorExample.of();
 
     }
 
