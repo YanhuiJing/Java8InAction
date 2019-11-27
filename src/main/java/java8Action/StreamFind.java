@@ -41,8 +41,10 @@ public class StreamFind {
     private static int find(Integer[] values, int defaultValue, Predicate<Integer> predicate) {
 
         for (int i : values) {
-            if (predicate.test(i))
+            if (predicate.test(i)) {
                 return i;
+            }
+
         }
 
         return defaultValue;
