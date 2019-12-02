@@ -1,0 +1,33 @@
+grep 'root' /etc/passwd  =>完全匹配查找
+grep '\<root\>' /etc/passwd  =>精准匹配,该方式不会匹配上roots
+grep 'r..t' /etc/passwd  =>"."表示除换行符外的任意字符
+grep 'r.*t' /etc/passwd  =>"*"匹配前一个字符0次或多次
+grep 'ro\{n,m\}t' /etc/passwd =>\{n,m\｝可以控制前一个字符匹配的次数范围
+grep 'ro\{1\}t' /etc/passwd  =>匹配至少一个o
+grep 'ro\{1,5\}t' /etc/passwd =>匹配1到5个o
+grep '^root.*bash$' /etc/passwd =>"^"表示开始符,"$"表示结束符
+echo "ABCD" | grep '[A-D]' => 匹配任意一个A-D开头的字母,[A-Za-z]表示全部的大小写字母
+echo "BCD" | grep '[A-D]' => 匹配B开头的字母
+echo "ABCD" | grep '[^A-D]' => "^"在[]中有特殊的意义,表示非即无法与其中的任意一字母开头
+echo 123 | grep [0-9]  => 匹配数字
+echo 123 | grep '\d'   => 无法匹配,因为"\d"是一种Perl兼容的表达式,需要加-P才能匹配
+echo 123 | grep -P '\d'
+echo "_" | grep "\w"  =>匹配数字,字母,下划线,相当于[A-Za-z0-9_]
+echo "\\" | grep "\W" =>匹配非数字,非字母,非下划线,相当于[^A-Za-z0-9]
+"\n" => 换行符
+"\r" => 换车符
+"\t" => 制表符
+"\s" => 匹配任何空白字符
+"\S" => 匹配任何非空白字符
+"?"  => 匹配前一个字符0次或1次
+"+"  => 匹配前一个字符1次以上
+(-|+) => "()"和"|"通常搭配使用,表示或
+
+sed -e "s/this/that/g" -e "s/line/Line/g" sed.txt => sed替换文本,如果需要替换多个文本,需要通过-e进行连接
+sed "1d" sed.txt => 删除第一行
+sed "1,3d" sed.txt => 删除1-3行
+sed "5,$d" sed.txt => 删除5到最后一行
+sed "$d" sed.txt => 删除最后一行
+sed "/Empty/d" sed.txt => 删除包含Empty的一行
+sed "/^$/d" sed.txt => 删除空行
+
