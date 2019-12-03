@@ -11,6 +11,37 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Created by wangwenjun on 2016/10/18.
+ * interface Stream
+ *      Stream<T> filter(Predicate<? super T> predicate);
+ *      <R> Stream<R> map(Function<? super T, ? extends R> mapper);
+ *      <R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper);
+ *      Stream<T> distinct();
+ *      Stream<T> sorted();
+ *      Stream<T> sorted(Comparator<? super T> comparator);
+ *      Stream<T> peek(Consumer<? super T> action);
+ *      Stream<T> limit(long maxSize);
+ *      Stream<T> skip(long n);
+ *      void forEach(Consumer<? super T> action);
+ *      Object[] toArray();
+ *      T reduce(T identity, BinaryOperator<T> accumulator);
+ *      <R> R collect(Supplier<R> supplier,BiConsumer<R, ? super T> accumulator,BiConsumer<R, R> combiner);
+ *      <R, A> R collect(Collector<? super T, A, R> collector);
+ *      Optional<T> min(Comparator<? super T> comparator);
+ *      Optional<T> max(Comparator<? super T> comparator);
+ *
+ *      interface Predicate<T>
+ *           boolean test(T t);
+        interface Function<T, R>
+            R apply(T t);
+        interface Consumer<T>
+            void accept(T t);
+        interface BiFunction<T, U, R>
+            R apply(T t, U u);
+        interface BiConsumer<T, U>
+            void accept(T t, U u);
+        interface Supplier<T>
+            T get();
+ *
  */
 public class SimpleStream {
     public static void main(String[] args) {

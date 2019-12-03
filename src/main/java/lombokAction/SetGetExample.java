@@ -24,11 +24,5 @@ public class SetGetExample {
     private int age;
     private double score;
 
-    public static void main(String[] args) {
-        SetGetExample data = new SetGetExample();
 
-        data.setName("gavin").setAge(30)
-
-
-    }
 }

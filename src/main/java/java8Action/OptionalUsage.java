@@ -11,11 +11,11 @@ public class OptionalUsage {
 
     public static void main(String[] args) {
 
-        Optional<Insurance> insuranceOptional = Optional.<Insurance>empty();
+//        Optional<Insurance> insuranceOptional = Optional.<Insurance>empty();
 
 //        insuranceOptional.get();
 
-        Optional<Insurance> insuranceOptional1 = Optional.of(new Insurance());
+//        Optional<Insurance> insuranceOptional1 = Optional.of(new Insurance());
 
         /*insuranceOptional1.get();
 
@@ -42,14 +42,19 @@ public class OptionalUsage {
         nameOptional.ifPresent(System.out::println);*/
 
 
-        System.out.println(getInsuranceName(null));
-        System.out.println(getInsuranceNameByOptional(null));
+//        System.out.println(getInsuranceName(null));
+//        System.out.println(getInsuranceNameByOptional(null));
+
+        Insurance insurance = new Insurance("gavin");
+
+        Optional.ofNullable(insurance).map(Insurance::getName).ifPresent(System.out::println);
     }
 
 
     private static String getInsuranceName(Insurance insurance) {
-        if (null == insurance)
+        if (null == insurance) {
             return "unknown";
+        }
         return insurance.getName();
     }
 
