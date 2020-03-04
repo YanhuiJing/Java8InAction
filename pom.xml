@@ -62,6 +62,21 @@
       <version>1.7.12</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-nop</artifactId>
+      <version>1.7.12</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka -->
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka_2.11</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+
+
     <!--<dependency>-->
       <!--<groupId>ch.qos.logback</groupId>-->
       <!--<artifactId>logback-classic</artifactId>-->
