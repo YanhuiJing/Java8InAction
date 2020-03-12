@@ -16,11 +16,50 @@ public class SortAction {
 
 //        insertSortAction(nums);
 
-        quickSort(nums,0,6);
-
-        System.out.println(Arrays.toString(nums));
+//        quickSort(nums,0,6);
+//
+//        System.out.println(Arrays.toString(nums));
     }
 
+    public static void quickSorts(int[] nums,int start,int end){
+
+        if(start >= end){return;}
+
+        int partition = partition(nums, start, end);
+
+        quickSort(nums,start,partition-1);
+        quickSort(nums,partition+1,end);
+
+
+    }
+
+
+    public static int partitions(int[] nums,int left,int right){
+
+        int soldier = nums[right];
+
+        int pos = left;
+
+        for(int index = left;index<right;index++){
+
+            if(nums[index] < soldier){
+
+                if(index != pos){
+
+                    int temp = nums[index];
+                    nums[index] = nums[pos];
+                    nums[pos] = temp;
+                }
+                ++pos;
+            }
+        }
+
+        nums[right] = nums[pos];
+        nums[pos] = soldier;
+
+        return pos;
+
+    }
 
     //O(n2)
     public static void bubbleSortAction(int[] nums){

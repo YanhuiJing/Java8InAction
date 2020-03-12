@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class RecursionAction {
 
-
+    private static Map<Integer,Integer> map= new HashMap<>();
 
     //n阶楼梯,一次可以走1步或2步,一共多少种走法
     public static int findStep(int num){
@@ -17,7 +17,6 @@ public class RecursionAction {
         if(num ==1) {return 1;}
         if(num ==2) {return 2;}
 
-        Map<Integer,Integer> map= new HashMap<>();
 
         //通过map记录已经计算完成的值,避免重复计算
         if(map.containsKey(num)){

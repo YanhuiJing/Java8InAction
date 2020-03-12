@@ -1,5 +1,7 @@
 package algorithm.linkedlist;
 
+import org.hamcrest.core.IsNot;
+
 import java.util.Objects;
 
 /**
@@ -17,7 +19,6 @@ public class NodeAction {
         Node node05 = new Node(4, node04);
 
 
-        System.out.println(removeLastKNode(node05,3));
 
     }
 
@@ -41,7 +42,8 @@ public class NodeAction {
 
     }
 
-    // 利用速度差检测链表是否有环
+    // 利用速
+    // 度差检测链表是否有环
     public static Boolean checkCircle(Node node){
         if(Objects.isNull(node)){
             return false;
@@ -67,23 +69,24 @@ public class NodeAction {
     // 合并有序链表
     public static Node MergeSortList(Node node1,Node node2){
         Node soldier = new Node(0,null);
-        Node p = null;
+        Node pre = soldier;
 
         while(Objects.nonNull(node1) && Objects.nonNull(node2)){
 
             if(node1.getData()<node2.getData()){
-                p.setNext(node1);
+                pre.setNext(node1);
                 node1 = node1.getNext();
             }else{
-                p.setNext(node2);
+                pre.setNext(node2);
                 node2 = node2.getNext();
             }
 
-            if(Objects.isNull(node1)) {p.setNext(node2);}
-
-            if(Objects.isNull(node2)) {p.setNext(node1);}
-
+            pre = pre.getNext();
         }
+
+        if(Objects.isNull(node1)) {pre.setNext(node2);}
+
+        if(Objects.isNull(node2)) {pre.setNext(node1);}
 
         return soldier.getNext();
     }
