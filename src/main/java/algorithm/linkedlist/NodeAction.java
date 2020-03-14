@@ -19,7 +19,6 @@ public class NodeAction {
         Node node05 = new Node(4, node04);
 
 
-
     }
 
     //反转单向链表
