@@ -1,4 +1,4 @@
-package fastJsonAction;
+package jsonAction;
 
 import java.util.ArrayList;
 import java.util.List;

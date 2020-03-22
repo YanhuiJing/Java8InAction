@@ -1,4 +1,4 @@
-package fastJsonAction;
+package jsonAction;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;

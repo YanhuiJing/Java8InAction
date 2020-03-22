@@ -24,6 +24,7 @@ import static org.junit.Assert.assertThat;
  * @author:Alex Wang
  * @Date:2017/10/14
  * @QQ: 532500648
+ * java IO详解https://www.jianshu.com/p/e591ca6642e9
  ***************************************/
 public class FilesTest {
 
